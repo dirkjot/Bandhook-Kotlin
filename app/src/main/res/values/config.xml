@@ -17,4 +17,5 @@
 
 <resources>
     <integer name="cache_duration">86400</integer>
+    <string name="last_fm_api_key">6ce333bc7d6c58c315f628efc7d94f68</string>
 </resources>
