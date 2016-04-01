@@ -69,8 +69,6 @@ class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
     }
 
     override fun showArtist(artistDetail: ArtistDetail) {
-        name.text = artistDetail.name
-        biography.text = Html.fromHtml(artistDetail.bio)
 
 //        supportStartPostponedEnterTransition()
     }
