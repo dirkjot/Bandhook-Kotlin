@@ -29,7 +29,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected abstract val layoutResource: Int
-    val toolbar: Toolbar by lazy { find<Toolbar>(R.id.toolbar) }
+    val toolbar: Toolbar by lazy { find<Toolbar>(R.id.toolbar) }  // move me DPJ
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
