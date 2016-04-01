@@ -1,3 +1,15 @@
+
+# Sandbox for playing with Kotlin on Android
+
+Trying to understand, improve and extend the nice example contributed by AntonioLg.  [Original Repo](https://github.com/antoniolg/Bandhook-Kotlin)
+
+See Plans.md for our notes etc. 
+
+
+Original readme.md follows:
+
+---------------------
+
 #Bandhook Kotlin
 
 This project is a small replica of the app I developed some time ago. [Bandhook can still be found on Play Store](https://play.google.com/store/apps/details?id=com.limecreativelabs.bandhook)
