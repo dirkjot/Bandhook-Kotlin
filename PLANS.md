@@ -4,6 +4,14 @@
 - Here is a sample request response
 
 
+## Tabbed interface
+
+found that tabs are old hat.  we should use a viewPager, which supports swipes and  with links (icons) in action bar instead. 
+
+This page explains what we want in some detail
+http://www.truiton.com/2015/06/android-tabs-example-fragments-viewpager/
+
+(we also tried another approach, with fragments, which we abondoned)
 
 ## Related artist request
 
