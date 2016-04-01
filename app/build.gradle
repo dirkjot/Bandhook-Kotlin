@@ -65,4 +65,5 @@ dependencies {
     compile "com.path:android-priority-jobqueue:1.1.2"
     compile "org.jetbrains.anko:anko-sdk15:$parent.ext.ankoVersion"
     compile "org.jetbrains.anko:anko-support-v4:$parent.ext.ankoVersion"
+    compile "com.android.support:support-v4:23.2.1" // DPJ do we need this and can we use $supportVersion
 }
