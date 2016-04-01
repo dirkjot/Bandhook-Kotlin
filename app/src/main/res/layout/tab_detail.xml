@@ -41,10 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/toolbar"
-            android:layout_marginStart="56dp"
-            android:layout_marginLeft="56dp"
+            android:layout_marginStart="@dimen/detail_toolbar_min_height"
+            android:layout_marginLeft="@dimen/detail_toolbar_min_height"
             android:height="4dp"
-            android:minHeight="56dp"
+            android:minHeight="@dimen/detail_toolbar_min_height"
             android:maxLines="1"
             android:maxLength="15"
             android:ellipsize="end"
@@ -59,7 +59,7 @@
         android:id="@+id/scrollableView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/detail_toolbar_height"
+        android:paddingTop="@dimen/detail_toolbar_min_height"
         android:clipToPadding="false"
         android:theme="@style/NeutralColorEdge">
 

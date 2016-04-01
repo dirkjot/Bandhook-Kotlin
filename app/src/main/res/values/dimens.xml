@@ -16,5 +16,6 @@
 
 <resources>
     <dimen name="detail_toolbar_height">300dp</dimen>
+    <dimen name="detail_toolbar_min_height">56dp</dimen>
     <dimen name="statusbar_height">24dp</dimen>
 </resources>
