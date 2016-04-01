@@ -95,13 +95,13 @@ interface ScrollableHeaderActivity {
         titleText.scaleY = Math.max(1f, scale)
     }
 
-    private fun updateToolbarAlpha(minHeight: Int, maxHeight: Int, y: Int) {
-        val alpha = ((y / (maxHeight - minHeight).toFloat()) * 255).toInt()
+    private fun updateToolbarAlpha(minHeight: Int, maxHeight: Int, scrollY: Int) {
+        val alpha = ((scrollY / (maxHeight - minHeight).toFloat()) * 255).toInt()
         val finalAlpha = Math.max(0, Math.min(alpha, 255))
 
         with(activity.toolbar){
             val toolbarParams = layoutParams
-            toolbarParams?.height = Math.max(maxHeight - y, minHeight)
+            toolbarParams?.height = Math.max(maxHeight - scrollY, minHeight)
             layoutParams = toolbarParams
             background.alpha = finalAlpha
         }

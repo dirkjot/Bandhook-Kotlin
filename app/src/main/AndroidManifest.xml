@@ -41,6 +41,9 @@
         <activity
             android:name=".ui.screens.detail.DetailActivity"
             android:parentActivityName=".ui.screens.main.MainActivity"/>
+        <activity
+            android:name=".ui.screens.tabs.TabActivity"
+            android:parentActivityName=".ui.screens.main.MainActivity"/>
     </application>
 
 </manifest>
