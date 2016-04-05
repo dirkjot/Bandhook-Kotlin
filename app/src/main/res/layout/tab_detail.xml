@@ -16,12 +16,17 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="102dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -52,43 +57,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             tools:text="Artist name"/>
 
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
     </RelativeLayout>
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:background="?attr/colorPrimary"
-        android:elevation="6dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout"/>
-
-    <!--<com.antonioleiva.bandhookkotlin.ui.custom.ObservableScrollView-->
-        <!--android:id="@+id/scrollableView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:paddingTop="@dimen/detail_toolbar_min_height"-->
-        <!--android:clipToPadding="false"-->
-        <!--android:theme="@style/NeutralColorEdge">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/biography"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:minHeight="800dp"-->
-            <!--android:background="@android:color/white"-->
-            <!--android:padding="16dp"-->
-            <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
-            <!--tools:text="Biography"/>-->
-
-    <!--</com.antonioleiva.bandhookkotlin.ui.custom.ObservableScrollView>-->
-
 
 </FrameLayout>

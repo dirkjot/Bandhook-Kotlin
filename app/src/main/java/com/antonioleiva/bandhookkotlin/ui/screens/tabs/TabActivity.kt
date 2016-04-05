@@ -25,10 +25,10 @@ class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
             interactorExecutor, ArtistDetailDataMapper())
 
     val name by lazy { find<TextView>(R.id.name) }
-    val biography by lazy { find<TextView>(R.id.biography) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        println("oncreate tabactivity")
 //        supportPostponeEnterTransition()
         title = null
 
@@ -46,6 +46,7 @@ class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
         tabLayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position
+                println("actually made the change , tab to ${tab.position}");
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {       }
@@ -59,17 +60,21 @@ class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
 
     override fun onResume() {
         super.onResume()
+        println("onresume tabactivity")
         presenter.onResume()
         presenter.init(getNavigationId())
     }
 
     override fun onPause() {
         super.onPause()
+        println("onpause tabactivity")
         presenter.onPause()
     }
 
     override fun showArtist(artistDetail: ArtistDetail) {
-
 //        supportStartPostponedEnterTransition()
+        name.text = artistDetail.name
+        val fragment : BiographyFragment = supportFragmentManager.fragments[0] as BiographyFragment
+        fragment.showArtist(artistDetail)
     }
 }

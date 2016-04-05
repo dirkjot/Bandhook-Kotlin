@@ -10,8 +10,30 @@ found that tabs are old hat.  we should use a viewPager, which supports swipes a
 
 This page explains what we want in some detail
 http://www.truiton.com/2015/06/android-tabs-example-fragments-viewpager/
+this android docs page also talks about it, in another way:
+http://developer.android.com/training/implementing-navigation/lateral.html
 
-(we also tried another approach, with fragments, which we abondoned)
+
+we use a viewpager to show multiple fragments and swipe between them.
+http://developer.android.com/reference/android/support/v4/view/ViewPager.html
+
+a viewpager always has a pageradapter in it, usually a more specialized one such as FragmentPagerAdapter
+http://developer.android.com/reference/android/support/v4/view/PagerAdapter.html
+http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html
+the fragmentpageradapter has a small list of fragments that populate the pages.
+
+each 'tab' in the viewpager is a fragment, which is a mini activity in android.
+http://developer.android.com/guide/components/fragments.html
+
+a fragment has a bunch of required callbacks:  onPause, onCreate and onCreateView (the last one is called when
+the fragment's ui is shown for the first time)
+
+
+Bundle:
+Bundle is generally used for passing data between various activities of android. It depends on you what type of values you want to pass, but bundle can hold all types of values, and pass to the new activity.
+http://stackoverflow.com/questions/4999991/what-is-a-bundle-in-an-android-application
+
+
 
 ## Related artist request
 
