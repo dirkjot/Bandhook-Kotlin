@@ -18,4 +18,6 @@
     <dimen name="detail_toolbar_height">300dp</dimen>
     <dimen name="detail_toolbar_min_height">56dp</dimen>
     <dimen name="statusbar_height">24dp</dimen>
+    <dimen name="tabbar_height">46dp</dimen>
+    <dimen name="maximum_header_height">346dp</dimen>
 </resources>

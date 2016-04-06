@@ -4,32 +4,39 @@ import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.text.Html
+import android.widget.ImageView
 import android.widget.TextView
 import com.antonioleiva.bandhookkotlin.R
 import com.antonioleiva.bandhookkotlin.di.Inject
 import com.antonioleiva.bandhookkotlin.di.Injector
 import com.antonioleiva.bandhookkotlin.ui.activity.BaseActivity
+import com.antonioleiva.bandhookkotlin.ui.activity.ScrollableHeaderActivity
 import com.antonioleiva.bandhookkotlin.ui.adapter.PagerAdapter
 import com.antonioleiva.bandhookkotlin.ui.entity.ArtistDetail
 import com.antonioleiva.bandhookkotlin.ui.entity.mapper.ArtistDetailDataMapper
 import com.antonioleiva.bandhookkotlin.ui.presenter.DetailPresenter
 import com.antonioleiva.bandhookkotlin.ui.util.getNavigationId
 import com.antonioleiva.bandhookkotlin.ui.view.DetailView
+import com.squareup.picasso.Callback
+import com.squareup.picasso.Picasso
 import org.jetbrains.anko.find
 
-class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
+class TabActivity : BaseActivity(), DetailView, ScrollableHeaderActivity,
+        Injector by Inject.instance {
 
+    override val activity: BaseActivity = this
     override val layoutResource: Int = R.layout.tab_detail
 
     val presenter = DetailPresenter(this, bus, artistDetailInteractorProvider,
             interactorExecutor, ArtistDetailDataMapper())
 
+    val image by lazy { find<ImageView>(R.id.image) }
     val name by lazy { find<TextView>(R.id.name) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         println("oncreate tabactivity")
-//        supportPostponeEnterTransition()
+        supportPostponeEnterTransition()
         title = null
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)  // enable back icon and clickable toolbar
@@ -72,9 +79,15 @@ class TabActivity : BaseActivity(), DetailView, Injector by Inject.instance {
     }
 
     override fun showArtist(artistDetail: ArtistDetail) {
-//        supportStartPostponedEnterTransition()
         name.text = artistDetail.name
         val fragment : BiographyFragment = supportFragmentManager.fragments[0] as BiographyFragment
         fragment.showArtist(artistDetail)
+
+        Picasso.with(this).load(artistDetail.url).fit().centerCrop().into(image, object : Callback.EmptyCallback() {
+            override fun onSuccess() {
+                initScrollableHeader()
+                supportStartPostponedEnterTransition()
+            }
+        })
     }
 }
