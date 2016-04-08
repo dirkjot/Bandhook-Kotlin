@@ -34,6 +34,14 @@ Bundle is generally used for passing data between various activities of android.
 http://stackoverflow.com/questions/4999991/what-is-a-bundle-in-an-android-application
 
 
+## testing stuff
+
+used this post: http://engineering.pivotal.io/post/setting-up-kotlin-with-android-and-tests/
+
+
+Consider using HamKrest instead, https://github.com/npryce/hamkrest
+
+
 
 ## Related artist request
 

@@ -15,7 +15,7 @@
  */
 
 buildscript {
-    ext.kotlin_version = "1.0.1"
+    ext.kotlin_version = "1.0.0"  // DPJ was 1.0.1
     repositories {
         jcenter()
     }
@@ -33,7 +33,7 @@ allprojects {
     ext {
         // Android config
         androidBuildToolsVersion = "23.0.1"
-        androidMinSdkVersion = 16
+        androidMinSdkVersion = 18
         androidTargetSdkVersion = 23
         androidCompileSdkVersion = 23
         androidApplicationId = "com.antonioleiva.bandhookkotlin"

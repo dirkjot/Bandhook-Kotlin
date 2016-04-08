@@ -16,6 +16,7 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion parent.ext.androidCompileSdkVersion
@@ -66,4 +67,25 @@ dependencies {
     compile "com.path:android-priority-jobqueue:1.1.2"
     compile "org.jetbrains.anko:anko-sdk15:$parent.ext.ankoVersion"
     compile "org.jetbrains.anko:anko-support-v4:$parent.ext.ankoVersion"
+    compile "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    testCompile 'junit:junit:4.12'
+    //testCompile "org.mockito:mockito-core:1.10.19"
+    testCompile 'org.hamcrest:hamcrest-core:1.1'
+    testCompile 'org.hamcrest:hamcrest-library:1.1'
+    testCompile 'org.hamcrest:hamcrest-integration:1.1'
+    testCompile "org.robolectric:robolectric:3.0"
+    testCompile "com.nhaarman:mockito-kotlin:0.3.1"
+
+    // below is for the AndroidTest configuration
+//    androidTestCompile "com.android.support:support-annotations:$supportVersion"
+//
+//    androidTestCompile 'com.android.support.test:runner:0.4.1'
+//    androidTestCompile 'com.android.support.test:rules:0.4.1'
+//    // Optional -- Hamcrest library
+//    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+//    // Optional -- UI testing with Espresso
+//    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+//    // Optional -- UI testing with UI Automator
+//    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
+
 }
