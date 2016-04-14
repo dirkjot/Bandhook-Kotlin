@@ -34,12 +34,12 @@ allprojects {
         // Android config
         androidBuildToolsVersion = "23.0.1"
         androidMinSdkVersion = 18
-        androidTargetSdkVersion = 23
-        androidCompileSdkVersion = 23
+        androidTargetSdkVersion = 21
+        androidCompileSdkVersion = 21
         androidApplicationId = "com.antonioleiva.bandhookkotlin"
         androidVersionCode = 1
         androidVersionName = "0.1"
-        supportVersion = "23.1.1"
+        supportVersion = "21.0.3"
         ankoVersion= "0.8.3"
     }
 }

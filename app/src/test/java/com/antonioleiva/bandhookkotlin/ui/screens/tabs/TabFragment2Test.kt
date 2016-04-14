@@ -1,5 +1,6 @@
 package com.antonioleiva.bandhookkotlin.ui.screens.tabs
 
+import android.os.Build
 import android.support.v4.app.Fragment
 import com.antonioleiva.bandhookkotlin.BuildConfig
 import com.nhaarman.mockito_kotlin.mock
@@ -12,10 +13,10 @@ import org.robolectric.annotation.Config
 
 
 //@RunWith(RobolectricGradleTestRunner::class)
-//@Config(constants = BuildConfig::class)
+//@Config(constants = BuildConfig::class, sdk = Build.VERSION_CODES.KITKAT)
 class TabFragment2Test {
 
-    
+
 
     // we can test java/kotlin level activity with these tests
     @Test
